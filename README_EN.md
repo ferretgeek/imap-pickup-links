@@ -1,26 +1,12 @@
-![IMAP pickup links — one revocable web link per mailbox](docs/images/social-preview.png)
-
 # IMAP pickup links
 
 [中文](README.md) · English
 
-[![CI](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/ci.yml/badge.svg)](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/codeql.yml/badge.svg)](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/codeql.yml)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Standard library](https://img.shields.io/badge/runtime_dependencies-standard_library-177e89)](#getting-started)
-[![License: MIT](https://img.shields.io/badge/License-MIT-177e89.svg)](LICENSE)
+Create a separate web link for each receiving address in an existing mailbox, so recipients can view recent messages and verification codes. Disable or rotate each link independently without sharing the mailbox password.
 
-> One independent web link per mailbox, so someone else can collect a verification code — without you handing over the password.
+Requirements: Windows, macOS, or Linux, Python 3.10+, SQLite 3.35+, and an IMAP-accessible mailbox with an app-specific password. Sharing requires a reachable service address; public access requires HTTPS.
 
-## Why this exists
-
-Sometimes you need another person — a colleague, a family member, a temporary collaborator — to get a verification code out of a particular mailbox. Usually there are two options: give them the password, or sit there and relay codes by hand.
-
-Neither is good. The first hands over the entire mailbox; the second costs your time.
-
-This is a third option: **a cryptographically random web link per receiving mailbox.** Whoever opens it sees recent mail and codes from that one mailbox — nothing else, and no password. Any link can be disabled or rotated individually at any time.
-
-The service runs on your own machine or server and uses **only the Python standard library** at runtime.
+[Run locally](#getting-started) · [Import mailboxes](#importing-mailboxes) · [Server deployment](docs/部署说明.md)
 
 ## Interface
 

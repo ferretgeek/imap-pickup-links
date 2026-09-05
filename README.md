@@ -1,26 +1,12 @@
-![邮件取件链接 — 每个邮箱一条可撤销的网页链接](docs/images/social-preview.png)
-
 # 邮件取件链接
 
 中文 · [English](README_EN.md)
 
-[![CI](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/ci.yml/badge.svg)](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/codeql.yml/badge.svg)](https://github.com/ferretgeek/imap-pickup-links/actions/workflows/codeql.yml)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![零依赖](https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E4%BE%9D%E8%B5%96-%E5%8F%AA%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93-177e89)](#三分钟跑起来)
-[![License: MIT](https://img.shields.io/badge/License-MIT-177e89.svg)](LICENSE)
+为已有邮箱的收件地址生成独立网页链接，打开即可查看最近邮件和验证码。每条链接可单独停用或重置，接收者无需知道邮箱密码。
 
-> 给每个邮箱生成一条独立的网页链接，对方打开就能收验证码——不用交出邮箱密码。
+适用环境：Windows、macOS 或 Linux，Python 3.10+ 与 SQLite 3.35+；需可通过 IMAP 读取的邮箱和应用专用密码，分享给他人前需配置可访问的服务地址，公网使用 HTTPS。
 
-## 为什么会需要它
-
-有时候你需要让别人（同事、家人、临时协作者）拿到某个邮箱里的验证码。可选项通常只有两个：把邮箱密码给他，或者你自己盯着邮箱当人工转发器。
-
-两个都不好。第一个交出了整个邮箱，第二个占用你的时间。
-
-这个工具给出第三个选项：**为每个收件邮箱生成一条密码学随机的网页链接。** 打开链接的人只能看到那一个邮箱的最近邮件和验证码，看不到别的邮箱，也拿不到密码。链接可以随时单独停用或重置。
-
-服务跑在你自己的电脑或服务器上，运行时**只依赖 Python 标准库**。
+[本地启动](#三分钟跑起来) · [导入邮箱](#导入邮箱) · [服务器部署](docs/部署说明.md)
 
 ## 界面
 
